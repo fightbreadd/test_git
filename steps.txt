@@ -3,6 +3,9 @@
 3. sorry， 先git add {$FILE}, 表示把文件先暂存（stage）到本地仓库，{$FILE}表示文件路径，一般默认使用 .， 表示当前目录下的所有文件
 4. 然后就要把untracked文件commit到本地仓库，即git commit -m "init"， -m表示添加message, ""里面可以是任意字符
 5. git需要验证身份信息，最好使用ssh密钥，现在本地生成私钥和公钥,把公钥复制到github上
-6. 关联到远端仓库， git remote add origin {远端仓库地址}, 如果已经添加了远端仓库，删掉,重来一次
+6. 关联到远端仓库， git remote add origin {远端仓库地址}, 如果已经添加了远端仓库，删掉.git文件,重来一次（仅限初始化git）
+7. 将本地仓库的代码push到远端仓库： git push origin {分支名称}，初始化的时候分支名称可以随便起，
 
-可以看到是有一个隐藏文件夹控制着所有git信息，删掉就可以重新初始化
+后面可以在本地新建分支，比如git branch main,创建main分支,使用git checkout 切换到main分支，修改代码
+
+可以看到是有一个隐藏文件夹.git控制着所有git信息，删掉就可以重新初始化

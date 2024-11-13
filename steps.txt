@@ -1,0 +1,8 @@
+1. 在本地新建目录，在目录中创建好代码文件；
+2. git init, 初始化一个git目录（本地仓库），初始化后，git status就会显示本地的所有文件都是untracked，即未添加的更改
+3. sorry， 先git add {$FILE}, 表示把文件先暂存（stage）到本地仓库，{$FILE}表示文件路径，一般默认使用 .， 表示当前目录下的所有文件
+4. 然后就要把untracked文件commit到本地仓库，即git commit -m "init"， -m表示添加message, ""里面可以是任意字符
+5. git需要验证身份信息，最好使用ssh密钥，现在本地生成私钥和公钥,把公钥复制到github上
+6. 关联到远端仓库， git remote add origin {远端仓库地址}, 如果已经添加了远端仓库，删掉,重来一次
+
+可以看到是有一个隐藏文件夹控制着所有git信息，删掉就可以重新初始化
